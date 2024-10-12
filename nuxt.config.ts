@@ -24,5 +24,5 @@ export default defineNuxtConfig({
       },
     }
   },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/supabase'],
+  modules: ['@nuxtjs/supabase', '@nuxt/ui'],
 })
