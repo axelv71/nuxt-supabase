@@ -3,13 +3,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "pnpm generate:db:types && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate:db:types": "supabase gen types typescript --linked > types/database.types.ts"
   },
   "dependencies": {
+    "@nuxtjs/supabase": "^1.4.1",
+    "@supabase/ssr": "^0.5.1",
+    "@supabase/supabase-js": "^2.45.4",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
