@@ -11,13 +11,16 @@
     "generate:db:types": "supabase gen types typescript --linked > types/database.types.ts"
   },
   "dependencies": {
+    "@nuxt/fonts": "^0.10.0",
+    "@nuxt/image": "^1.8.1",
     "@nuxt/ui": "^2.18.7",
     "@nuxtjs/supabase": "^1.4.1",
     "@supabase/ssr": "^0.5.1",
     "@supabase/supabase-js": "^2.45.4",
     "nuxt": "^3.13.0",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.13",
