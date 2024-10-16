@@ -34,7 +34,35 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          email: string
+          id: string
+          picture_url: string | null
+          username: string
+        }
+        Insert: {
+          email: string
+          id: string
+          picture_url?: string | null
+          username: string
+        }
+        Update: {
+          email?: string
+          id?: string
+          picture_url?: string | null
+          username?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "profiles_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import LogoutButton from "~/components/auth/logout-button.vue";
 
+definePageMeta({
+  layout: 'dashboard',
+})
+
 const user = useSupabaseUser()
 </script>
 
