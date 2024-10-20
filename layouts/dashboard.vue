@@ -23,7 +23,7 @@
       </div>
     </aside>
 
-    <main class="sm:ml-80">
+    <main class="sm:ml-80 min-h-screen bg-[#FAFAFA]">
       <slot />
     </main>
   </div>
